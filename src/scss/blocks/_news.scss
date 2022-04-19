@@ -1,0 +1,106 @@
+.news {
+    border-top: 3px solid #000000;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 323px;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover {
+            transform: translateY(-18px);
+            
+        }
+        @media (max-width: 1320px) {
+            &:nth-child(4) {
+                margin-top: 30px;
+            }
+        }
+        @media (max-width: 1025px) {
+            &:nth-child(4) {
+                margin-top: 0;
+            }
+        }
+    }
+    &__item-image {
+        transition: 0.5s;
+        overflow: hidden;
+        &:hover {
+            transform: rotate(4deg); 
+        }
+        img {
+            transition: 0.5s;
+            display: block; 
+            width: 100%;
+            object-fit: cover;
+            height: 236px;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        
+    }
+    &__item-label {
+        margin-top: 19px;
+        font-size: 16px;
+        margin-left: 27px;
+        color: #b75f5b;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            background: url('../img/figure.png') center no-repeat;
+            width: 13px;
+            height: 16px;
+            left: -27px;
+            
+        }
+    }
+    &__item-descr {
+        margin-top: 10px;
+        color: #231f20;
+        font-size: 19px;
+        font-family: 'PT Serif', serif;
+        font-weight: 700;
+    }
+    &__item-text {
+        margin-top: 18px;
+        font-family: 'Noto Sans';
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 400;
+        color: #616161;
+    }
+    &__item-date {
+        margin-top: 20px;
+        font-size: 14px;
+        font-family: 'Noto Sans';
+        color: #9e9e9e;
+    }
+}
+
+
+/* ----------- @media запросы ---------- */
+
+@media (max-width: 1320px ) {
+    .news {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    .news {
+        &__wrapper {
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        padding: 50px 0 50px;
+    }
+}
