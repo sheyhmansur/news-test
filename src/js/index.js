@@ -1,4 +1,4 @@
-/* ----------- Инициализация слайдера на планшетных и мобильных устройствах ---------- */
+/* ----------- Инциалазиця слайдера на планшетных и мобильных устройствах ---------- */
 
 const slider = document.querySelector(".swiper");
 
@@ -8,7 +8,7 @@ function mobileSlider() {
   if (window.innerWidth <= 1024 && slider.dataset.mobile == "false") {
     mySwiper = new Swiper(slider, {
       slidesPerview: "auto",
-      spaceBetween: 10,
+      spaceBetween: 20,
       // effect: "fade",
       loop: true,
       pagination: {
